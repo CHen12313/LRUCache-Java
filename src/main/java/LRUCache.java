@@ -34,7 +34,7 @@ public class LRUCache {
     }
 
     // It updates recentness and evict if capacity is exceeded
-    public void touch(int hash){
+    private void touch(int hash){
         if (!cacheMap.containsKey(hash)) {
             throw new IllegalArgumentException("Object not in cache");
         }
